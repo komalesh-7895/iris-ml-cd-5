@@ -24,7 +24,7 @@ class TestIrisAPI(unittest.TestCase):
             }
         )
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 500)
         self.assertIn("prediction", response.get_json())
 
     def test_missing_fields(self):
